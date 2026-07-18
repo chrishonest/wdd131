@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Temple Album | WDD 131</title>
 
-    <meta name="description" content="Temple Album Assignment for WDD 131">
+    <meta name="description"
+        content="Explore a responsive temple album featuring beautiful temple images, mobile navigation, and a CSS Grid layout for the WDD 131 Dynamic Web Fundamentals course.">
     <meta name="author" content="Honest Christopher">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,90 +25,90 @@
 
 <body>
 
-<header>
+    <header>
+        <button id="menu"></button>
 
-    <h1>Temple Album</h1>
+        <nav class="navigation">
 
-    <button id="menu"></button>
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
 
-    <nav class="navigation">
+        </nav>
 
-        <a href="#">Home</a>
-        <a href="#">Old</a>
-        <a href="#">New</a>
-        <a href="#">Large</a>
-        <a href="#">Small</a>
+    </header>
 
-    </nav>
+    <main>
 
-</header>
+        <h1>Temple Album</h1>
 
-<main>
+        <h2>Temple Gallery</h2>
 
-    <h2>Temple Gallery</h2>
+        <section class="gallery">
 
-    <section class="gallery">
+            <figure>
+                <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple">
-            <figcaption>Aba Nigeria Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
-            <figcaption>Accra Ghana Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/brigham-city-temple.jpg" alt="Brigham City Temple">
+                <figcaption>Brigham City Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/brigham-city-temple.jpg" alt="Brigham City Temple">
-            <figcaption>Brigham City Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/logan-utah-temple.jpg" alt="Logan Utah Temple">
+                <figcaption>Logan Utah Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/logan-utah-temple.jpg" alt="Logan Utah Temple">
-            <figcaption>Logan Utah Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/manti-utah-temple.jpg" alt="Manti Utah Temple">
+                <figcaption>Manti Utah Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/manti-utah-temple.jpg" alt="Manti Utah Temple">
-            <figcaption>Manti Utah Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/payson-utah-temple.jpg" alt="Payson Utah Temple">
+                <figcaption>Payson Utah Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/payson-utah-temple.jpg" alt="Payson Utah Temple">
-            <figcaption>Payson Utah Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple">
-            <figcaption>Rome Italy Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple">
-            <figcaption>Salt Lake Temple</figcaption>
-        </figure>
+            <figure>
+                <img src="images/washington-dc-temple.jpg" alt="Washington DC Temple">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
 
-        <figure>
-            <img src="images/washington-dc-temple.jpg" alt="Washington DC Temple">
-            <figcaption>Washington D.C. Temple</figcaption>
-        </figure>
+        </section>
 
-    </section>
+    </main>
 
-</main>
+    <footer>
 
-<footer>
+        <p>
+            ©
+            <span id="currentyear"></span>
+            | Honest Christopher | Nigeria
+        </p>
 
-    <p>
-        ©
-        <span id="currentyear"></span>
-        | Honest Christopher | Nigeria
-    </p>
+        <p id="lastModified"></p>
 
-    <p id="lastModified"></p>
-
-</footer>
+    </footer>
 
 </body>
+
 </html>

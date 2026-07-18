@@ -42,10 +42,17 @@ header h1 {
 .navigation {
     display: flex;
     flex-direction: column;
-    display: none;
 }
 
 .navigation.open {
+    display: flex;
+}
+
+nav.navigation:not(.open) {
+    display: none;
+}
+
+nav.navigation.open {
     display: flex;
 }
 
