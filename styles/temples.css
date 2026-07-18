@@ -1,0 +1,112 @@
+/* Google Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Hamburger Button */
+#menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    transition: background-color .3s;
+}
+
+.navigation a:hover {
+    background-color: #2563eb;
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    margin: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+}
+
+figure img {
+    width: 100%;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: .75rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: .3rem;
+}

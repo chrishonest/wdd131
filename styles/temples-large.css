@@ -1,0 +1,33 @@
+/* Large Screen View */
+@media screen and (min-width: 768px) {
+
+    /* Hide Hamburger Button */
+    #menu {
+        display: none;
+    }
+
+    /* Navigation */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .navigation a {
+        padding: 0.75rem 1.25rem;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    figure img {
+        transition: transform 0.3s ease;
+    }
+
+    figure img:hover {
+        transform: scale(1.05);
+    }
+}
