@@ -89,10 +89,10 @@ header h1 {
 }
 
 .info p {
-    display: flex;
-    justify-content: space-between;
-    padding: .55rem 0;
-    border-bottom: 1px solid #ececec;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: .5rem;
+    align-items: center;
 }
 
 .info p:last-child {
