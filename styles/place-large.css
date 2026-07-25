@@ -1,0 +1,58 @@
+@media screen and (min-width:800px) {
+
+    .hero {
+
+        position: relative;
+
+    }
+
+    .hero picture {
+
+        display: block;
+
+    }
+
+    .hero img {
+
+        width: 100%;
+        display: block;
+
+    }
+
+    .card {
+
+        position: absolute;
+        background: rgba(255, 255, 255, .90);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+
+    }
+
+    .data {
+
+        left: 40px;
+        top: 40px;
+        width: 280px;
+
+    }
+
+    .weather {
+
+        right: 40px;
+        bottom: 40px;
+        width: 250px;
+
+    }
+
+    .weather-icon {
+
+        display: none;
+
+    }
+
+    .weather h2::after {
+
+        content: " ⛅";
+
+    }
+
+}

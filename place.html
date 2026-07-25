@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nigeria | WDD 131 Place Page</title>
+
+    <meta name="description" content="Place page about Nigeria">
+    <meta name="author" content="Honest Christopher">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Nigeria</h1>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <picture>
+
+                <source media="(min-width:800px)" srcset="images/nigeria-large.webp">
+
+                <img src="images/nigeria_flag.jpeg" alt="Beautiful landscape of Nigeria">
+
+            </picture>
+
+            <section class="card data">
+
+                <h2>Data</h2>
+
+                <p><strong>Area:</strong> 923,768 km²</p>
+                <p><strong>Population:</strong> 230,000,000</p>
+                <p><strong>Capital:</strong> Abuja</p>
+                <p><strong>Languages:</strong> English</p>
+                <p><strong>Currency:</strong> Naira (₦)</p>
+                <p><strong>Time Zone:</strong> UTC+1</p>
+                <p><strong>Calling Code:</strong> +234</p>
+                <p><strong>Internet TLD:</strong> .ng</p>
+
+            </section>
+
+            <section class="card weather">
+
+                <h2>Weather</h2>
+
+                <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+
+                <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
+
+                <p><strong>Conditions:</strong> Sunny</p>
+
+                <p><strong>Wind:</strong> <span id="windSpeed">8</span> km/h</p>
+
+                <p><strong>Wind Chill:</strong> <span id="windChill"></span></p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © <span id="currentyear"></span>
+            Honest Christopher
+            Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
