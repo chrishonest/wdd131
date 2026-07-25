@@ -1,58 +1,85 @@
-@media screen and (min-width:800px) {
+/* ----------------------------------
+   WDD131 Place Page
+   Desktop Styles
+-----------------------------------*/
+
+@media screen and (min-width: 800px) {
+
+    body {
+        background: #eef3f7;
+    }
 
     .hero {
-
         position: relative;
-
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .hero picture {
-
         display: block;
-
     }
 
     .hero img {
-
         width: 100%;
+        height: auto;
         display: block;
-
     }
+
+ /* Floating Cards */
 
     .card {
-
         position: absolute;
-        background: rgba(255, 255, 255, .90);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-
+        width: 300px;
+        margin: 0;
+        background: rgba(255,255,255,.92);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(0,0,0,.20);
     }
+
+    /* Data Card */
 
     .data {
-
-        left: 40px;
         top: 40px;
-        width: 280px;
-
+        left: 40px;
     }
+
+     /* Weather Card */
 
     .weather {
-
         right: 40px;
         bottom: 40px;
-        width: 250px;
-
     }
+
+    /* Hide SVG on Desktop */
 
     .weather-icon {
-
         display: none;
-
     }
 
-    .weather h2::after {
-
+    /* Required by Rubric */
+.weather h2::after {
         content: " ⛅";
+        font-size: 1.2rem;
+    }
 
+    /* Better Card Heading */
+.card h2 {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: .5rem 1rem;
+        margin: -1.5rem 0 1rem -1.5rem;
+        border-radius: 0 0 12px 0;
+        font-size: 1.3rem;
+    }
+
+     .info p {
+        font-size: .95rem;
+    }
+
+    footer {
+        margin-top: 0;
     }
 
 }

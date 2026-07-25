@@ -1,91 +1,147 @@
-:root{
+/* ------------------------------
+   WDD 131 - Place Page
+   Mobile First
+--------------------------------*/
 
---green:#008751;
---white:#ffffff;
---red:#008751;
---shadow:0 4px 10px rgba(0,0,0,.3);
-
+:root {
+    --primary: #008751;
+    --secondary: #f4b400;
+    --white: #ffffff;
+    --light: #f5f7fa;
+    --text: #222;
+    --shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    --radius: 15px;
+    --transition: .3s ease;
 }
 
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-font-family:Roboto,sans-serif;
-background:#f5f5f5;
-color:#222;
-
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-
-background:var(--green);
-color:white;
-padding:20px;
-text-align:center;
-font-size:1.5rem;
-
+body {
+    font-family: "Open Sans", sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
 }
 
-.hero{
+/* HEADER */
 
-display:flex;
-flex-direction:column;
-
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
 }
 
-.hero picture{
-
-width:100%;
-
+header h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-.hero img{
+/* HERO */
 
-width:100%;
-display:block;
-
+.hero {
+    display: flex;
+    flex-direction: column;
 }
 
-.card{
-
-background:white;
-padding:20px;
-text-align:center;
-
+.hero picture {
+    width: 100%;
 }
 
-.card h2{
-
-margin-bottom:20px;
-
+.hero img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
-.card p{
 
-margin:10px 0;
+/* CARDS */
 
+.card {
+    background: white;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
-.weather-icon{
-
-width:70px;
-margin:10px auto;
-display:block;
-
+.card:hover {
+    transform: translateY(-5px);
 }
 
-footer{
+.card h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
 
-background:var(--green);
-color:white;
-padding:15px;
-text-align:center;
+.info p {
+    display: flex;
+    justify-content: space-between;
+    padding: .55rem 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.info p:last-child {
+    border-bottom: none;
+}
+
+strong {
+    color: #333;
+}
+
+/* WEATHER */
+
+.weather {
+    text-align: center;
+}
+
+
+/* WEATHER */
+
+.weather {
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+footer p {
+    margin: .4rem 0;
+}
+
+/* TABLETS */
+
+@media (min-width:600px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        max-width: 700px;
+        margin: 1.5rem auto;
+    }
 
 }
