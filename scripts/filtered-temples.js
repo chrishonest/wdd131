@@ -13,7 +13,7 @@ document.querySelector("#currentyear").textContent = new Date().getFullYear();
 
 // Last modified date
 document.querySelector("#lastModified").textContent =
-    `Last Modification: ${document.lastModified}`;
+    `Last Modified: ${document.lastModified}`;
 
 
 // Filter temples with area greater than 10000

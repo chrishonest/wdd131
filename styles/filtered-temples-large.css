@@ -1,4 +1,6 @@
-/* Large Screen View */
+/* ===========================================
+   Large Screen View (768px and above)
+=========================================== */
 @media screen and (min-width: 768px) {
 
     /* Hide Hamburger Button */
@@ -6,26 +8,59 @@
         display: none;
     }
 
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
     /* Navigation */
     nav.navigation {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: center;
         gap: 1rem;
     }
 
     .navigation a {
-        padding: 0.75rem 1.25rem;
+        display: block;
+        padding: 0.75rem 1rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .navigation a:hover {
+        background-color: #2563eb;
     }
 
     /* Gallery */
     .gallery {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 
-    /* Temple Card Image Hover */
+    /* Temple Cards */
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+    }
+
     .card img {
-        transition: transform 0.3s ease;
+        transition: transform .3s ease;
     }
 
     .card img:hover {
