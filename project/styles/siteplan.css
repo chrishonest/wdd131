@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --golden-brown: #c68642;
+    --dark-brown: #5c4033;
+    --cream: #fff8e7;
+    --white: #ffffff;
+    --text-color: #2f251f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--text-color);
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1,
+h2,
+h3 {
+    font-family: Merriweather, Georgia, serif;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--white);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-left: 6px solid var(--golden-brown);
+    border-radius: 4px;
+}
+
+h2 {
+    color: var(--dark-brown);
+    border-bottom: 2px solid var(--golden-brown);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--golden-brown);
+}
+
+.wireframe {
+    border: 3px solid var(--dark-brown);
+    background-color: var(--cream);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.box,
+.hero {
+    border: 2px solid var(--dark-brown);
+    background-color: var(--white);
+    margin: 0.5rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.hero {
+    background-color: var(--golden-brown);
+    color: var(--white);
+    min-height: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.desktop-header,
+.product-row {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.desktop-header {
+    grid-template-columns: 1fr 2fr;
+}
+
+.product-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .desktop-header,
+    .product-row {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0.75rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
