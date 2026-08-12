@@ -2,27 +2,32 @@ const products = [
     {
         name: "Coconut Bread",
         description: "A delicious and soft bread made with a rich coconut flavor.",
-        category: "Sweet Bread"
+        category: "Sweet Bread",
+        image: "images/cocobread.jpeg"
     },
     {
         name: "Family Loaf",
         description: "A large, fresh loaf perfect for sharing with the whole family.",
-        category: "Bread"
+        category: "Bread",
+        image: "images/family_loaf.jpeg"
     },
     {
         name: "Buns and Milk Bread",
         description: "Soft, tasty, and freshly baked for a satisfying snack.",
-        category: "Pastry"
+        category: "Pastry",
+        image: "images/milkbread.jpeg"
     },
     {
         name: "Mini Loaf",
         description: "A convenient smaller loaf for individuals and smaller households.",
-        category: "Bread"
+        category: "Bread",
+        image: "images/mini.jpeg"
     },
     {
         name: "Soft Bite Bread",
         description: "A light and soft bread with a delicious texture.",
-        category: "Bread"
+        category: "Bread",
+        image: "images/softbite.jpeg"
     }
 ];
 
@@ -35,6 +40,9 @@ function displayFeaturedProducts() {
         featuredProducts.forEach((product) => {
             featuredContainer.innerHTML += `
                 <article class="product-card">
+                    <img src="${product.image}" 
+                         alt="${product.name}" 
+                         loading="lazy">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <p><strong>Category:</strong> ${product.category}</p>
@@ -63,6 +71,9 @@ function displayProducts(productList = products) {
     productList.forEach((product) => {
         productContainer.innerHTML += `
             <article class="product-card">
+                <img src="${product.image}" 
+                     alt="${product.name}" 
+                     loading="lazy">
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
                 <p><strong>Category:</strong> ${product.category}</p>
@@ -105,7 +116,8 @@ function saveFavorite() {
         message.textContent = "Please select a product category first.";
     } else {
         localStorage.setItem("favoriteCategory", selectedCategory);
-        message.textContent = `${selectedCategory} has been saved as your favorite category.`;
+        message.textContent =
+            `${selectedCategory} has been saved as your favorite category.`;
     }
 }
 
@@ -119,7 +131,8 @@ function loadFavorite() {
     const favoriteCategory = localStorage.getItem("favoriteCategory");
 
     if (favoriteCategory) {
-        message.textContent = `Your saved favorite category is ${favoriteCategory}.`;
+        message.textContent =
+            `Your saved favorite category is ${favoriteCategory}.`;
     }
 }
 
@@ -135,7 +148,8 @@ function setLastModified() {
     const lastModified = document.querySelector("#lastModified");
 
     if (lastModified) {
-        lastModified.textContent = `Last Modified: ${document.lastModified}`;
+        lastModified.textContent =
+            `Last Modified: ${document.lastModified}`;
     }
 }
 

@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #5C4033;
-    --secondary-color: #C68642;
-    --light-color: #FFF8E7;
-    --dark-color: #5C4033;
-    --accent-color: #C68642;
+    --primary-color: #6b3100;
+    --secondary-color: #c76b00;
+    --light-color: #f8f4ee;
+    --dark-color: #2b1b12;
+    --accent-color: #f2c078;
     --white: #ffffff;
 }
 
@@ -31,6 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo h1 {
@@ -79,16 +80,36 @@ main {
     margin: 0 auto;
 }
 
+/* Hero Section */
+
 .hero {
     background-color: var(--dark-color);
     color: var(--white);
-    padding: 5rem 1rem;
-    text-align: center;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
 }
 
 .hero-content {
     max-width: 700px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .hero h2 {
@@ -106,7 +127,11 @@ section h2 {
 
 .welcome {
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+/* Buttons */
 
 .button {
     display: inline-block;
@@ -116,13 +141,18 @@ section h2 {
     margin-top: 1rem;
     text-decoration: none;
     border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
 
 .button:hover {
     background-color: var(--primary-color);
 }
 
+/* Featured Products */
+
 #featured-products,
+#products-container,
 .benefits {
     display: grid;
     gap: 1rem;
@@ -137,6 +167,19 @@ section h2 {
     box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
+.product-card {
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
 .product-card h3 {
     margin-top: 0;
 }
@@ -145,10 +188,135 @@ section h2 {
     text-align: center;
 }
 
+/* Page Introduction */
+
+.page-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.page-intro h2 {
+    margin-top: 0;
+}
+
+/* Product Controls */
+
+.product-controls {
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 6px;
+    margin: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.product-controls label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.product-controls select {
+    padding: 0.6rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--dark-color);
+}
+
+#favorite-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 0.6rem 1rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#favorite-button:hover {
+    background-color: var(--primary-color);
+}
+
+#favorite-message {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Contact Information */
+
+.contact-information {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Contact Form */
+
+.contact-form-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form-section form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.contact-form-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form-section textarea {
+    resize: vertical;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus,
+.product-controls select:focus {
+    outline: 3px solid var(--accent-color);
+}
+
+.contact-form-section input[type="submit"] {
+    width: auto;
+    margin-top: 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.contact-form-section input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+
+/* CTA */
+
 .cta {
     background-color: var(--accent-color);
     text-align: center;
+    margin-top: 1rem;
 }
+
+/* Footer */
 
 footer {
     background-color: var(--primary-color);
@@ -165,7 +333,12 @@ footer a {
     color: var(--white);
 }
 
-/* Larger screens */
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Larger Screens */
+
 @media screen and (min-width: 700px) {
 
     #menu-button {
@@ -182,12 +355,27 @@ footer a {
         padding: 0.5rem 1rem;
     }
 
-    .benefits,
-    #featured-products {
+    #featured-products,
+    #products-container,
+    .benefits {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .hero {
-        padding: 7rem 2rem;
+        grid-template-columns: 1fr 1fr;
+        padding: 4rem 2rem;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
+        text-align: left;
+    }
+
+    .hero h2 {
+        text-align: left;
     }
 }
