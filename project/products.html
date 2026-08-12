@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore the fresh breads and bakery products available from D'ose Crust Bakery in Abuja, Nigeria.">
+
+    <meta name="author" content="Honest Christopher">
+
+    <title>D'ose Crust Bakery | Products</title>
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>D'ose Crust Bakery</h1>
+                <p>Freshly Baked Goodness</p>
+            </div>
+
+            <button id="menu-button" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-intro">
+            <h2>Our Products</h2>
+
+            <p>
+                Discover our selection of freshly baked bread and bakery products.
+                Choose a category below to explore our available products.
+            </p>
+        </section>
+
+        <section class="product-controls">
+
+            <label for="category-filter">Filter Products:</label>
+
+            <select id="category-filter">
+                <option value="all">All Products</option>
+                <option value="Bread">Bread</option>
+                <option value="Sweet Bread">Sweet Bread</option>
+                <option value="Pastry">Pastry</option>
+            </select>
+
+            <button id="favorite-button" type="button">
+                Save Favorite
+            </button>
+
+            <p id="favorite-message"></p>
+
+        </section>
+
+        <section>
+
+            <h2>Fresh From Our Bakery</h2>
+
+            <div id="products-container"></div>
+
+        </section>
+
+        <section class="cta">
+
+            <h2>Have a Question?</h2>
+
+            <p>
+                Contact D'ose Crust Bakery to learn more about our products
+                and make an inquiry.
+            </p>
+
+            <a href="contact.html" class="button">
+                Contact Us
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            D'ose Crust Bakery | Abuja, Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+
+        <p>
+            <a href="references.html">References</a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

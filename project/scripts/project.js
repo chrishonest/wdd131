@@ -29,10 +29,39 @@ const products = [
 function displayFeaturedProducts() {
     const featuredContainer = document.querySelector("#featured-products");
 
-    const featuredProducts = products.slice(0, 3);
+    if (featuredContainer) {
+        const featuredProducts = products.slice(0, 3);
 
-    featuredProducts.forEach((product) => {
-        featuredContainer.innerHTML += `
+        featuredProducts.forEach((product) => {
+            featuredContainer.innerHTML += `
+                <article class="product-card">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p><strong>Category:</strong> ${product.category}</p>
+                </article>
+            `;
+        });
+    }
+}
+
+function displayProducts(productList = products) {
+    const productContainer = document.querySelector("#products-container");
+
+    if (!productContainer) {
+        return;
+    }
+
+    productContainer.innerHTML = "";
+
+    if (productList.length === 0) {
+        productContainer.innerHTML = `
+            <p>No products were found in this category.</p>
+        `;
+        return;
+    }
+
+    productList.forEach((product) => {
+        productContainer.innerHTML += `
             <article class="product-card">
                 <h3>${product.name}</h3>
                 <p>${product.description}</p>
@@ -42,23 +71,102 @@ function displayFeaturedProducts() {
     });
 }
 
+function filterProducts() {
+    const filter = document.querySelector("#category-filter");
+
+    if (!filter) {
+        return;
+    }
+
+    const selectedCategory = filter.value;
+
+    if (selectedCategory === "all") {
+        displayProducts(products);
+    } else {
+        const filteredProducts = products.filter(
+            (product) => product.category === selectedCategory
+        );
+
+        displayProducts(filteredProducts);
+    }
+}
+
+function saveFavorite() {
+    const filter = document.querySelector("#category-filter");
+    const message = document.querySelector("#favorite-message");
+
+    if (!filter || !message) {
+        return;
+    }
+
+    const selectedCategory = filter.value;
+
+    if (selectedCategory === "all") {
+        message.textContent = "Please select a product category first.";
+    } else {
+        localStorage.setItem("favoriteCategory", selectedCategory);
+        message.textContent = `${selectedCategory} has been saved as your favorite category.`;
+    }
+}
+
+function loadFavorite() {
+    const message = document.querySelector("#favorite-message");
+
+    if (!message) {
+        return;
+    }
+
+    const favoriteCategory = localStorage.getItem("favoriteCategory");
+
+    if (favoriteCategory) {
+        message.textContent = `Your saved favorite category is ${favoriteCategory}.`;
+    }
+}
+
 function setCurrentYear() {
-    document.querySelector("#currentyear").textContent =
-        new Date().getFullYear();
+    const year = document.querySelector("#currentyear");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 }
 
 function setLastModified() {
-    document.querySelector("#lastModified").textContent =
-        `Last Modified: ${document.lastModified}`;
+    const lastModified = document.querySelector("#lastModified");
+
+    if (lastModified) {
+        lastModified.textContent = `Last Modified: ${document.lastModified}`;
+    }
 }
 
 function toggleMenu() {
     const navigation = document.querySelector("nav");
-    navigation.classList.toggle("open");
+
+    if (navigation) {
+        navigation.classList.toggle("open");
+    }
 }
 
 displayFeaturedProducts();
+displayProducts();
+loadFavorite();
 setCurrentYear();
 setLastModified();
 
-document.querySelector("#menu-button").addEventListener("click", toggleMenu);
+const menuButton = document.querySelector("#menu-button");
+
+if (menuButton) {
+    menuButton.addEventListener("click", toggleMenu);
+}
+
+const categoryFilter = document.querySelector("#category-filter");
+
+if (categoryFilter) {
+    categoryFilter.addEventListener("change", filterProducts);
+}
+
+const favoriteButton = document.querySelector("#favorite-button");
+
+if (favoriteButton) {
+    favoriteButton.addEventListener("click", saveFavorite);
+}
