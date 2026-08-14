@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="D'ose Crust Bakery offers freshly baked bread, pastries, buns, and other delicious baked goods for customers in Abuja, Nigeria.">
-
+    <meta name="description" content="D'ose Crust Bakery in Abuja offers freshly baked bread, coconut bread, buns, milk bread, mini loaves, and soft bite bread.">
     <meta name="author" content="Honest Christopher">
-
     <title>D'ose Crust Bakery | Freshly Baked Goodness</title>
-
     <link rel="stylesheet" href="styles/project.css">
-
     <script src="scripts/project.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <div class="header-content">
             <div class="logo">
-                <h1>D'ose Crust Bakery</h1>
+                <p class="site-name">D'ose Crust Bakery</p>
                 <p>Freshly Baked Goodness</p>
             </div>
-
-            <button id="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
-
-            <nav>
-                <a href="index.html" class="active">Home</a>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html" class="active" aria-current="page">Home</a>
                 <a href="products.html">Products</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -39,104 +26,62 @@
     </header>
 
     <main>
-
         <section class="hero">
             <div class="hero-image">
-                <img src="images/family_loaf.jpeg" alt="Freshly baked family loaf from D'ose Crust Bakery">
+                <img src="images/family_loaf.jpeg" alt="Freshly baked family loaf from D'ose Crust Bakery" width="737" height="416" fetchpriority="high" decoding="async">
             </div>
-
             <div class="hero-content">
-                <h2>Fresh Bread, Made With Care</h2>
-
-                <p>
-                    Welcome to D'ose Crust Bakery, where every loaf is baked
-                    with quality ingredients, care, and a passion for great taste.
-                </p>
-
-                <a href="products.html" class="button">
-                    Explore Our Products
-                </a>
+                <h1>Fresh Bread, Made With Care</h1>
+                <p>Welcome to D'ose Crust Bakery, where every loaf is baked with quality ingredients, care, and a passion for great taste.</p>
+                <a href="products.html" class="button">Explore Our Products</a>
             </div>
         </section>
 
         <section class="welcome">
             <h2>Welcome to D'ose Crust Bakery</h2>
-
-            <p>
-                We provide freshly baked breads and delicious bakery products
-                prepared to give our customers quality, freshness, and great taste.
-                From family loaves to coconut bread, buns, and mini loaves,
-                there is something for everyone.
-            </p>
+            <p>We provide freshly baked bread and delicious bakery products prepared to give our customers quality, freshness, and great taste. From family loaves to coconut bread, buns, milk bread, mini loaves, and soft bite bread, there is something for everyone.</p>
         </section>
 
-        <section class="featured-products">
-            <h2>Our Popular Products</h2>
+        <section class="about-bakery">
+            <h2>About Our Bakery</h2>
+            <p>D'ose Crust Bakery is focused on producing fresh, enjoyable bread for individuals, families, retailers, and everyday customers in Abuja. Our goal is to make dependable bakery products that are easy to discover, order, and enjoy.</p>
+        </section>
 
+        <section class="featured-products" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Our Popular Products</h2>
             <div id="featured-products"></div>
-
-            <a href="products.html" class="button">
-                View All Products
-            </a>
+            <a href="products.html" class="button">View All Products</a>
         </section>
 
-        <section class="why-us">
-            <h2>Why Choose Us?</h2>
-
+        <section class="why-us" aria-labelledby="why-us-heading">
+            <h2 id="why-us-heading">Why Choose Us?</h2>
             <div class="benefits">
                 <article>
                     <h3>Freshly Baked</h3>
-                    <p>
-                        Our products are prepared fresh to provide quality
-                        and great taste.
-                    </p>
+                    <p>Our products are prepared fresh to provide quality and great taste.</p>
                 </article>
-
                 <article>
                     <h3>Quality Ingredients</h3>
-                    <p>
-                        We use carefully selected ingredients in the production
-                        of our bakery products.
-                    </p>
+                    <p>We use carefully selected ingredients in the production of our bakery products.</p>
                 </article>
-
                 <article>
                     <h3>Made for Everyone</h3>
-                    <p>
-                        Our variety of bread products provides options for
-                        individuals and families.
-                    </p>
+                    <p>Our variety of bread products provides options for individuals and families.</p>
                 </article>
             </div>
         </section>
 
-        <section class="cta">
-            <h2>Ready to Place an Order?</h2>
-
-            <p>
-                Contact us today to learn more about our products or make an inquiry.
-            </p>
-
-            <a href="contact.html" class="button">
-                Contact Us
-            </a>
+        <section class="cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Ready to Place an Order?</h2>
+            <p>Contact us today to learn more about our products or make an inquiry.</p>
+            <a href="contact.html" class="button">Contact Us</a>
         </section>
-
     </main>
 
     <footer>
-        <p>
-            &copy; <span id="currentyear"></span>
-            D'ose Crust Bakery | Abuja, Nigeria
-        </p>
-
+        <p>&copy; <span id="currentyear"></span> D'ose Crust Bakery | Abuja, Nigeria</p>
         <p id="lastModified"></p>
-
-        <p>
-            <a href="references.html">References</a>
-        </p>
+        <p><a href="references.html">References</a></p>
     </footer>
-
 </body>
-
 </html>

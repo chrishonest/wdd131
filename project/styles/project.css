@@ -11,12 +11,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--light-color);
     color: var(--dark-color);
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
 }
 
 header {
@@ -34,12 +42,13 @@ header {
     flex-wrap: wrap;
 }
 
-.logo h1 {
+.site-name {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.logo p {
+.logo p:last-child {
     margin: 0;
     font-size: 0.9rem;
 }
@@ -51,6 +60,12 @@ header {
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
+    padding: 0.5rem;
+}
+
+#menu-button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 nav {
@@ -68,6 +83,7 @@ nav a {
     color: var(--white);
     text-decoration: none;
     padding: 0.8rem;
+    border-radius: 4px;
 }
 
 nav a:hover,
@@ -75,12 +91,15 @@ nav a.active {
     background-color: var(--secondary-color);
 }
 
+nav a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 main {
     max-width: 1100px;
     margin: 0 auto;
 }
-
-/* Hero Section */
 
 .hero {
     background-color: var(--dark-color);
@@ -125,13 +144,12 @@ section h2 {
     text-align: center;
 }
 
-.welcome {
+.welcome,
+.about-bakery {
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
 }
-
-/* Buttons */
 
 .button {
     display: inline-block;
@@ -143,13 +161,17 @@ section h2 {
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .button:hover {
     background-color: var(--primary-color);
 }
 
-/* Featured Products */
+.button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
 
 #featured-products,
 #products-container,
@@ -188,19 +210,16 @@ section h2 {
     text-align: center;
 }
 
-/* Page Introduction */
-
 .page-intro {
     text-align: center;
     max-width: 850px;
     margin: 0 auto;
 }
 
+.page-intro h1,
 .page-intro h2 {
     margin-top: 0;
 }
-
-/* Product Controls */
 
 .product-controls {
     text-align: center;
@@ -222,6 +241,7 @@ section h2 {
     border-radius: 4px;
     background-color: var(--white);
     color: var(--dark-color);
+    font-size: 1rem;
 }
 
 #favorite-button {
@@ -233,10 +253,17 @@ section h2 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 #favorite-button:hover {
     background-color: var(--primary-color);
+}
+
+#favorite-button:focus-visible,
+.product-controls select:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 #favorite-message {
@@ -244,15 +271,11 @@ section h2 {
     margin-bottom: 0;
 }
 
-/* Contact Information */
-
 .contact-information {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
-
-/* Contact Form */
 
 .contact-form-section {
     max-width: 700px;
@@ -277,7 +300,7 @@ section h2 {
 .contact-form-section textarea {
     width: 100%;
     padding: 0.7rem;
-    border: 1px solid #999;
+    border: 1px solid #777;
     border-radius: 4px;
     font-family: inherit;
     font-size: 1rem;
@@ -285,12 +308,13 @@ section h2 {
 
 .contact-form-section textarea {
     resize: vertical;
+    min-height: 150px;
 }
 
-.contact-form-section input:focus,
-.contact-form-section textarea:focus,
-.product-controls select:focus {
+.contact-form-section input:focus-visible,
+.contact-form-section textarea:focus-visible {
     outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .contact-form-section input[type="submit"] {
@@ -302,21 +326,23 @@ section h2 {
     padding: 0.7rem 1.5rem;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 .contact-form-section input[type="submit"]:hover {
     background-color: var(--primary-color);
 }
 
-/* CTA */
+.contact-form-section input[type="submit"]:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
 
 .cta {
     background-color: var(--accent-color);
     text-align: center;
     margin-top: 1rem;
 }
-
-/* Footer */
 
 footer {
     background-color: var(--primary-color);
@@ -337,10 +363,65 @@ footer a:hover {
     color: var(--accent-color);
 }
 
-/* Larger Screens */
+footer a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* Site-plan wireframes */
+.site-plan-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.wireframe {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.wireframe h4 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.wireframe-block {
+    border: 1px dashed var(--secondary-color);
+    padding: 0.55rem;
+    margin: 0.45rem 0;
+    text-align: center;
+    background-color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+
+.swatch-primary { background-color: #6b3100; color: #ffffff; }
+.swatch-secondary { background-color: #c76b00; color: #ffffff; }
+.swatch-light { background-color: #f8f4ee; color: #2b1b12; }
+.swatch-dark { background-color: #2b1b12; color: #ffffff; }
+.swatch-accent { background-color: #f2c078; color: #2b1b12; }
+
+.color-swatch {
+    display: inline-block;
+    min-width: 9rem;
+    padding: 0.55rem;
+    margin: 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #777;
+    text-align: center;
+    font-weight: bold;
+}
 
 @media screen and (min-width: 700px) {
-
     #menu-button {
         display: none;
     }
@@ -377,5 +458,15 @@ footer a:hover {
 
     .hero h2 {
         text-align: left;
+    }
+
+    .wireframe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }

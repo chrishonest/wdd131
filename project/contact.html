@@ -1,116 +1,67 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Contact D'ose Crust Bakery in Abuja, Nigeria for product inquiries, orders, and bakery information.">
-
+    <meta name="description" content="Contact D'ose Crust Bakery in Abuja, Nigeria for product inquiries, orders, and bakery information.">
     <meta name="author" content="Honest Christopher">
-
     <title>D'ose Crust Bakery | Contact Us</title>
-
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <div class="header-content">
-
             <div class="logo">
-                <h1>D'ose Crust Bakery</h1>
+                <p class="site-name">D'ose Crust Bakery</p>
                 <p>Freshly Baked Goodness</p>
             </div>
-
-            <button id="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
-
-            <nav>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
             </nav>
-
         </div>
     </header>
 
     <main>
-
         <section class="page-intro">
-            <h2>Contact D'ose Crust Bakery</h2>
-
-            <p>
-                Have a question about our products or want to make an inquiry?
-                Complete the form below and let us know how we can help.
-            </p>
+            <h1>Contact D'ose Crust Bakery</h1>
+            <p>Have a question about our products or want to make an inquiry? Complete the form below and let us know how we can help.</p>
         </section>
 
-        <section class="contact-information">
-            <h2>Get in Touch</h2>
-
-            <p>
-                We are happy to answer questions about our freshly baked bread
-                and bakery products.
-            </p>
-
+        <section class="contact-information" aria-labelledby="contact-info-heading">
+            <h2 id="contact-info-heading">Get in Touch</h2>
+            <p>We are happy to answer questions about our freshly baked bread and bakery products.</p>
             <p><strong>Location:</strong> Abuja, Nigeria</p>
             <p><strong>Business:</strong> D'ose Crust Bakery</p>
         </section>
 
-        <section class="contact-form-section">
-
-            <h2>Send Us a Message</h2>
-
+        <section class="contact-form-section" aria-labelledby="message-heading">
+            <h2 id="message-heading">Send Us a Message</h2>
             <form method="get" action="thankyou.html">
-
-                <label for="name">
-                    Full Name <span aria-hidden="true">*</span>
-                </label>
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
                 <input type="text" id="name" name="name" required autocomplete="name">
 
-                <label for="email">
-                    Email Address <span aria-hidden="true">*</span>
-                </label>
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
                 <input type="email" id="email" name="email" required autocomplete="email">
 
-                <label for="subject">
-                    Subject <span aria-hidden="true">*</span>
-                </label>
+                <label for="subject">Subject <span aria-hidden="true">*</span></label>
                 <input type="text" id="subject" name="subject" required>
 
-                <label for="message">
-                    Message <span aria-hidden="true">*</span>
-                </label>
+                <label for="message">Message <span aria-hidden="true">*</span></label>
                 <textarea id="message" name="message" rows="6" required></textarea>
 
                 <input type="submit" value="Send Message">
-
             </form>
-
         </section>
-
     </main>
 
     <footer>
-
-        <p>
-            &copy; <span id="currentyear"></span>
-            D'ose Crust Bakery | Abuja, Nigeria
-        </p>
-
+        <p>&copy; <span id="currentyear"></span> D'ose Crust Bakery | Abuja, Nigeria</p>
         <p id="lastModified"></p>
-
-        <p>
-            <a href="references.html">References</a>
-        </p>
-
+        <p><a href="references.html">References</a></p>
     </footer>
-
 </body>
-
 </html>

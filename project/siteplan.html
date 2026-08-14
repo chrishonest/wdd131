@@ -1,157 +1,230 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="A website planning document for D'ose Crust Bakery, outlining the bakery website's purpose, audience, colors, typography, and home page layout.">
-
+    <meta name="description" content="Website planning document for D'ose Crust Bakery, including purpose, audience, content, site map, style guide, and responsive wireframes.">
     <meta name="author" content="Honest Christopher">
-
     <title>D'ose Crust Bakery | Site Plan</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/project.css">
 </head>
-
 <body>
     <header>
-        <h1>D'ose Crust Bakery</h1>
-        <p>Website Planning Document</p>
+        <div class="header-content">
+            <div class="logo">
+                <p class="site-name">D'ose Crust Bakery</p>
+                <p>Website Planning Document</p>
+            </div>
+        </div>
     </header>
 
-    ```
     <main>
-        <section>
-            <h2>Site Name</h2>
-
-            <h3>D'ose Crust Bakery</h3>
-
-            <p>
-                The name D'ose Crust Bakery represents a bakery that produces
-                fresh bread and other baked goods. The name is memorable and
-                connects directly to the bakery's focus on freshly baked products
-                with a delicious crust.
-            </p>
+        <section class="page-intro site-plan-intro">
+            <h1>Website Planning Document</h1>
+            <p>This site plan defines the purpose, audience, content, visual design, navigation, and responsive layout for the D'ose Crust Bakery website.</p>
         </section>
 
         <section>
-            <h2>Site Purpose</h2>
+            <h2>Site Name</h2>
+            <h3>D'ose Crust Bakery</h3>
+            <p>The name D'ose Crust Bakery represents a bakery focused on fresh bread and baked goods. The name is memorable and connects the business identity with the quality crust and freshness of its products.</p>
+        </section>
 
-            <p>
-                The D'ose Crust Bakery website will provide information about the
-                bakery and its products. Visitors will be able to learn about the
-                different types of bread and baked goods available, discover
-                featured products, and contact the bakery for product inquiries
-                or orders.
-            </p>
+        <section>
+            <h2>Site Purpose and Goals</h2>
+            <p>The purpose of the website is to present D'ose Crust Bakery online and provide customers with clear information about the bakery, its products, and how to make an inquiry. Visitors can explore products, read descriptions, and use the contact form for questions or order inquiries.</p>
+            <h3>Site Goals</h3>
+            <ul>
+                <li>Present the bakery in a professional and welcoming way.</li>
+                <li>Display relevant information about available products.</li>
+                <li>Help customers discover products quickly.</li>
+                <li>Provide an easy way to make an inquiry.</li>
+                <li>Provide responsive navigation for mobile and desktop users.</li>
+                <li>Demonstrate JavaScript interaction using filtering, localStorage, DOM manipulation, and events.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Target Audience</h2>
+            <p>The primary audience includes local customers, families, individuals, retailers, and other customers looking for fresh bread and baked products in Abuja.</p>
+            <h3>Audience Needs</h3>
+            <ul>
+                <li>Quick access to product information.</li>
+                <li>Clear product descriptions and categories.</li>
+                <li>Simple navigation on phones and computers.</li>
+                <li>A clear method for asking questions or making inquiries.</li>
+                <li>A trustworthy, readable, and visually appealing bakery website.</li>
+            </ul>
         </section>
 
         <section>
             <h2>Scenarios</h2>
-
-            <p>
-                What types of bread and baked products are available at D'ose
-                Crust Bakery?
-            </p>
-
-            <p>
-                How can I contact D'ose Crust Bakery to ask about prices,
-                availability, or placing an order?
-            </p>
+            <h3>Scenario 1</h3>
+            <p>What types of bread and baked products are available at D'ose Crust Bakery?</p>
+            <h3>Scenario 2</h3>
+            <p>How can I contact D'ose Crust Bakery to ask about prices, availability, or placing an order?</p>
+            <h3>Scenario 3</h3>
+            <p>Which product category best matches the type of bread I want to buy?</p>
         </section>
 
         <section>
-            <h2>Color Schema</h2>
+            <h2>Site Map</h2>
+            <p>The website has three primary customer-facing pages and two supporting pages.</p>
+            <ul>
+                <li><strong>Home</strong> — index.html: introduction, featured products, benefits, and call to action.</li>
+                <li><strong>Products</strong> — products.html: product cards, category filtering, and favorite-category localStorage feature.</li>
+                <li><strong>Contact</strong> — contact.html: business information and inquiry form.</li>
+                <li><strong>Thank You</strong> — thankyou.html: form-submission confirmation page.</li>
+                <li><strong>References</strong> — references.html: project resources and image-source notes.</li>
+            </ul>
+        </section>
 
-            <h3>Golden Brown - #C68642</h3>
-            <p>
-                Golden brown will be used for buttons, navigation, accents, and
-                highlights.
-            </p>
+        <section>
+            <h2>Website Content</h2>
+            <h3>Home Page</h3>
+            <p>Hero image and welcome message, bakery introduction, featured products generated with JavaScript, three reasons to choose the bakery, and a contact call to action.</p>
+            <h3>Products Page</h3>
+            <p>Five product cards with local images, descriptions, categories, a category filter, and a favorite-category feature saved with localStorage.</p>
+            <h3>Contact Page</h3>
+            <p>Bakery location and business information plus a form for full name, email address, subject, and message.</p>
+        </section>
 
-            <h3>Dark Brown - #5C4033</h3>
+        <section>
+            <h2>Color Scheme</h2>
+            <p>Brown and cream tones create a warm bakery identity while maintaining readable contrast.</p>
             <p>
-                Dark brown will be used for headings, important text, and the
-                footer.
+                <span class="color-swatch" class="color-swatch swatch-primary">#6B3100 Primary</span>
+                <span class="color-swatch" class="color-swatch swatch-secondary">#C76B00 Secondary</span>
+                <span class="color-swatch" class="color-swatch swatch-light">#F8F4EE Light</span>
+                <span class="color-swatch" class="color-swatch swatch-dark">#2B1B12 Dark</span>
+                <span class="color-swatch" class="color-swatch swatch-accent">#F2C078 Accent</span>
             </p>
-
-            <h3>Cream - #FFF8E7</h3>
-            <p>
-                Cream will be used as the main background color.
-            </p>
+            <ul>
+                <li><strong>Primary brown:</strong> header, footer, and major branding areas.</li>
+                <li><strong>Secondary orange-brown:</strong> buttons, active navigation, and interactive elements.</li>
+                <li><strong>Light cream:</strong> primary page background.</li>
+                <li><strong>Dark brown:</strong> body text and hero background.</li>
+                <li><strong>Accent gold:</strong> focus indicators and highlights.</li>
+            </ul>
         </section>
 
         <section>
             <h2>Typography</h2>
+            <h3>Arial, Helvetica, Sans-Serif</h3>
+            <p>Arial is the primary typeface because it is familiar, readable, and widely available. Helvetica and the generic sans-serif family provide reliable fallbacks.</p>
+            <h3>Heading Style</h3>
+            <p>Headings use larger sizes and strong contrast to establish visual hierarchy.</p>
+            <h3>Body Style</h3>
+            <p>Body text uses a readable size, comfortable line height, and adequate spacing for mobile and desktop reading.</p>
+        </section>
 
-            <h3>Merriweather</h3>
-            <p>
-                Merriweather will be used for the website name, headings, and
-                section titles.
-            </p>
+        <section>
+            <h2>Branding and Element Styling</h2>
+            <ul>
+                <li>Use the bakery name consistently on all pages.</li>
+                <li>Maintain the brown-and-cream color palette.</li>
+                <li>Use consistent navigation, buttons, spacing, and rounded cards.</li>
+                <li>Use descriptive alternative text for informative images.</li>
+                <li>Use visible keyboard focus states.</li>
+                <li>Use clear labels and adequate spacing in forms.</li>
+            </ul>
+            <h3>Product Cards</h3>
+            <p>Product cards use white backgrounds, rounded corners, internal spacing, subtle shadows, and consistent image dimensions.</p>
+            <h3>Buttons and Links</h3>
+            <p>Buttons use the secondary color with white text. Hover and keyboard focus states provide clear feedback.</p>
+        </section>
 
-            <h3>Open Sans</h3>
-            <p>
-                Open Sans will be used for paragraphs, navigation, buttons,
-                forms, and other general website content.
-            </p>
+        <section>
+            <h2>Responsive Design</h2>
+            <p>The site follows a mobile-first approach. On smaller screens, navigation uses a menu button and content stacks into a single column. At 700 pixels and above, navigation becomes horizontal and the hero, product, and benefits sections use multiple columns.</p>
         </section>
 
         <section>
             <h2>Wireframes</h2>
+            <p>The following simplified wireframes show the planned structure and content order for the three primary pages on mobile and desktop screens.</p>
 
-            <h3>Mobile Home Page</h3>
+            <div class="wireframe-grid">
+                <div class="wireframe">
+                    <h4>Mobile Home</h4>
+                    <div class="wireframe-block">Header + Menu</div>
+                    <div class="wireframe-block">Hero Image</div>
+                    <div class="wireframe-block">Welcome / About</div>
+                    <div class="wireframe-block">Featured Products</div>
+                    <div class="wireframe-block">Why Choose Us</div>
+                    <div class="wireframe-block">Call to Action</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
 
-            <div class="wireframe mobile">
-                <div class="box">Logo / Site Name</div>
-                <div class="box">Navigation Menu</div>
-                <div class="hero">Hero Image and Welcome Message</div>
-                <div class="box">About the Bakery</div>
-                <div class="box">Featured Products</div>
-                <div class="box">Why Choose Us</div>
-                <div class="box">Contact Information</div>
-                <div class="box">Footer</div>
+                <div class="wireframe">
+                    <h4>Desktop Home</h4>
+                    <div class="wireframe-block">Header + Horizontal Navigation</div>
+                    <div class="wireframe-block">Hero: Image | Welcome</div>
+                    <div class="wireframe-block">Welcome / About</div>
+                    <div class="wireframe-block">Product 1 | Product 2 | Product 3</div>
+                    <div class="wireframe-block">Benefit 1 | Benefit 2 | Benefit 3</div>
+                    <div class="wireframe-block">Call to Action</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
+
+                <div class="wireframe">
+                    <h4>Mobile Products</h4>
+                    <div class="wireframe-block">Header + Menu</div>
+                    <div class="wireframe-block">Page Introduction</div>
+                    <div class="wireframe-block">Category Filter + Favorite</div>
+                    <div class="wireframe-block">Product Card</div>
+                    <div class="wireframe-block">Product Card</div>
+                    <div class="wireframe-block">Product Card + More</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
+
+                <div class="wireframe">
+                    <h4>Desktop Products</h4>
+                    <div class="wireframe-block">Header + Horizontal Navigation</div>
+                    <div class="wireframe-block">Page Introduction</div>
+                    <div class="wireframe-block">Category Filter + Favorite</div>
+                    <div class="wireframe-block">Product 1 | Product 2 | Product 3</div>
+                    <div class="wireframe-block">Product 4 | Product 5</div>
+                    <div class="wireframe-block">Call to Action</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
+
+                <div class="wireframe">
+                    <h4>Mobile Contact</h4>
+                    <div class="wireframe-block">Header + Menu</div>
+                    <div class="wireframe-block">Page Introduction</div>
+                    <div class="wireframe-block">Contact Information</div>
+                    <div class="wireframe-block">Name / Email / Subject / Message</div>
+                    <div class="wireframe-block">Submit Button</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
+
+                <div class="wireframe">
+                    <h4>Desktop Contact</h4>
+                    <div class="wireframe-block">Header + Horizontal Navigation</div>
+                    <div class="wireframe-block">Page Introduction</div>
+                    <div class="wireframe-block">Contact Information</div>
+                    <div class="wireframe-block">Centered Contact Form</div>
+                    <div class="wireframe-block">Submit Button</div>
+                    <div class="wireframe-block">Footer</div>
+                </div>
             </div>
+        </section>
 
-            <h3>Desktop Home Page</h3>
-
-            <div class="wireframe desktop">
-                <div class="desktop-header">
-                    <div class="box">Logo</div>
-                    <div class="box">Home | Products | Contact</div>
-                </div>
-
-                <div class="hero">
-                    Large Hero Image and Welcome Message
-                </div>
-
-                <div class="box">About the Bakery</div>
-
-                <div class="product-row">
-                    <div class="box">Product 1</div>
-                    <div class="box">Product 2</div>
-                    <div class="box">Product 3</div>
-                </div>
-
-                <div class="box">Why Choose Us</div>
-                <div class="box">Contact Information and Footer</div>
-            </div>
+        <section>
+            <h2>Accessibility, Performance, and JavaScript Plan</h2>
+            <ul>
+                <li>Use semantic HTML elements and logical heading structure.</li>
+                <li>Provide descriptive image alternative text and explicit image dimensions.</li>
+                <li>Use visible keyboard focus indicators and labeled form controls.</li>
+                <li>Lazy-load non-hero product images and prioritize the hero image.</li>
+                <li>Use JavaScript functions, arrays, objects, array methods, DOM manipulation, events, conditional logic, and localStorage.</li>
+                <li>Keep the site lightweight by using local images and no unnecessary external libraries.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 D'ose Crust Bakery | Honest Christopher</p>
     </footer>
-    ```
-
 </body>
-
 </html>

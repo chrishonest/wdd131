@@ -1,114 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Explore the fresh breads and bakery products available from D'ose Crust Bakery in Abuja, Nigeria.">
-
+    <meta name="description" content="Explore the fresh breads and bakery products available from D'ose Crust Bakery in Abuja, Nigeria.">
     <meta name="author" content="Honest Christopher">
-
     <title>D'ose Crust Bakery | Products</title>
-
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <div class="header-content">
-
             <div class="logo">
-                <h1>D'ose Crust Bakery</h1>
+                <p class="site-name">D'ose Crust Bakery</p>
                 <p>Freshly Baked Goodness</p>
             </div>
-
-            <button id="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
-
-            <nav>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
                 <a href="index.html">Home</a>
-                <a href="products.html" class="active">Products</a>
+                <a href="products.html" class="active" aria-current="page">Products</a>
                 <a href="contact.html">Contact</a>
             </nav>
-
         </div>
     </header>
 
     <main>
-
         <section class="page-intro">
-            <h2>Our Products</h2>
-
-            <p>
-                Discover our selection of freshly baked bread and bakery products.
-                Choose a category below to explore our available products.
-            </p>
+            <h1>Our Products</h1>
+            <p>Discover our selection of freshly baked bread and bakery products. Choose a category below to explore the available products.</p>
         </section>
 
-        <section class="product-controls">
-
+        <section class="product-controls" aria-labelledby="product-filter-heading">
+            <h2 id="product-filter-heading">Find a Product</h2>
             <label for="category-filter">Filter Products:</label>
-
-            <select id="category-filter">
+            <select id="category-filter" name="category">
                 <option value="all">All Products</option>
                 <option value="Bread">Bread</option>
                 <option value="Sweet Bread">Sweet Bread</option>
                 <option value="Pastry">Pastry</option>
             </select>
-
-            <button id="favorite-button" type="button">
-                Save Favorite
-            </button>
-
-            <p id="favorite-message"></p>
-
+            <button id="favorite-button" type="button">Save Favorite</button>
+            <p id="favorite-message" aria-live="polite"></p>
         </section>
 
-        <section>
-
-            <h2>Fresh From Our Bakery</h2>
-
+        <section aria-labelledby="bakery-products-heading">
+            <h2 id="bakery-products-heading">Fresh From Our Bakery</h2>
             <div id="products-container"></div>
-
         </section>
 
         <section class="cta">
-
             <h2>Have a Question?</h2>
-
-            <p>
-                Contact D'ose Crust Bakery to learn more about our products
-                and make an inquiry.
-            </p>
-
-            <a href="contact.html" class="button">
-                Contact Us
-            </a>
-
+            <p>Contact D'ose Crust Bakery to learn more about our products and make an inquiry.</p>
+            <a href="contact.html" class="button">Contact Us</a>
         </section>
-
     </main>
 
     <footer>
-
-        <p>
-            &copy; <span id="currentyear"></span>
-            D'ose Crust Bakery | Abuja, Nigeria
-        </p>
-
+        <p>&copy; <span id="currentyear"></span> D'ose Crust Bakery | Abuja, Nigeria</p>
         <p id="lastModified"></p>
-
-        <p>
-            <a href="references.html">References</a>
-        </p>
-
+        <p><a href="references.html">References</a></p>
     </footer>
-
 </body>
-
 </html>

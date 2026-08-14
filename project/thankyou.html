@@ -1,76 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Thank you for contacting D'ose Crust Bakery in Abuja, Nigeria.">
-
     <meta name="author" content="Honest Christopher">
-
     <title>D'ose Crust Bakery | Thank You</title>
-
     <link rel="stylesheet" href="styles/project.css">
     <script src="scripts/project.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <div class="header-content">
-
             <div class="logo">
-                <h1>D'ose Crust Bakery</h1>
+                <p class="site-name">D'ose Crust Bakery</p>
                 <p>Freshly Baked Goodness</p>
             </div>
-
-            <button id="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
-
-            <nav>
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
                 <a href="index.html">Home</a>
                 <a href="products.html">Products</a>
                 <a href="contact.html">Contact</a>
             </nav>
-
         </div>
     </header>
 
     <main>
-
         <section class="page-intro">
-            <h2>Thank You!</h2>
-
-            <p>
-                Thank you for contacting D'ose Crust Bakery.
-                We have received your message and appreciate your interest
-                in our freshly baked products.
-            </p>
-
-            <a href="index.html" class="button">
-                Return to Home
-            </a>
+            <h1>Thank You!</h1>
+            <p>Thank you for contacting D'ose Crust Bakery. We have received your message and appreciate your interest in our freshly baked products.</p>
+            <a href="index.html" class="button">Return to Home</a>
         </section>
-
     </main>
 
     <footer>
-
-        <p>
-            &copy; <span id="currentyear"></span>
-            D'ose Crust Bakery | Abuja, Nigeria
-        </p>
-
+        <p>&copy; <span id="currentyear"></span> D'ose Crust Bakery | Abuja, Nigeria</p>
         <p id="lastModified"></p>
-
-        <p>
-            <a href="references.html">References</a>
-        </p>
-
+        <p><a href="references.html">References</a></p>
     </footer>
-
 </body>
-
 </html>
